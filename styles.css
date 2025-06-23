@@ -147,6 +147,11 @@ header {
   grid-area: 1/2/1/3;
 }
 
+header img {
+  width: 1.5em;
+  height: 1.5em;
+}
+
 
 /* sidebar */
 
@@ -154,14 +159,19 @@ aside {
   grid-area: 1/1/3/1;
 
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
   gap: 2em;
 
   background-color: var(--blue);
   color: var(--offwhite);
+
+  padding: 1em
 }
 
-aside > div .sidebar-item {
+aside > ul {
+
+}
+
+aside .sidebar-item {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;

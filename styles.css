@@ -131,7 +131,7 @@ li {
 /*parent grid*/
 .main-container {
   display: grid;
-  grid-template-columns: 250px minmax(500px, 1fr);
+  grid-template-columns: 275px minmax(500px, 1fr);
   grid-template-rows: 1fr 1fr;
   width: 100vw;
   height: 100vh;
@@ -147,8 +147,8 @@ header {
 }
 
 header img {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 
@@ -157,29 +157,29 @@ header img {
 aside {
   grid-area: 1/1/3/1;
 
-  display: grid;
-  gap: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 
   background-color: var(--blue);
   color: var(--offwhite);
 
-  padding: 1em
+  padding: 1rem
 }
 
 aside > ul img {
-  width: 1.5em;
-  height: 1.5em;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 aside .top-container img {
-  width: 3em;
-  height: 3em;
+  width: 3rem;
+  height: 3rem;
 }
 
 aside .sidebar-item {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1em;
+  display: flex;
+  gap: 1.5rem;
   align-items: center;
 }
 

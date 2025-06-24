@@ -178,9 +178,19 @@ header .lower-header {
 
 .lower-header .greeting {
   display: grid;
-  grid-template-columns: 4rem 4fr;
+  grid-template-columns: 4rem minmax(250px, 4fr);
   grid-template-rows: 2rem 2rem;
   
+  column-gap: 1em;
+}
+
+.greeting p {
+  font-weight: 700;
+  align-self: end;
+}
+
+.greeting h2 {
+  align-self: end;
 }
 
 .lower-header #user-icon {

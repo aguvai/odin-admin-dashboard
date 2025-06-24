@@ -132,11 +132,25 @@ li {
 .main-container {
   display: grid;
   grid-template-columns: 250px minmax(500px, 1fr);
-  grid-template-rows: 1fr 5fr;
+  grid-template-rows: 1.1fr 5fr;
   width: 100vw;
   height: 100vh;
 
   font-family: Roboto, sans-serif;
+}
+
+
+header .upper-header,
+header .lower-header,
+.upper-header .search-container,
+.upper-header .profile-section,
+.lower-header nav {
+  display: flex;
+}
+
+header .upper-header,
+header .lower-header {
+  justify-content: space-between;
 }
 
 
@@ -145,7 +159,7 @@ li {
 header {
   grid-area: 1/2/1/3;
 
-  padding: 1em 2em;
+  padding: 1.2em 2em 0em;
 
   display: grid;
   gap: 1em;
@@ -164,27 +178,13 @@ header #user-icon {
   border-radius: 50%;
 }
 
-header .upper-header,
-header .lower-header,
-.upper-header .search-container,
-.upper-header .profile-section,
-.lower-header nav {
-  display: flex;
-}
-
-header .upper-header,
-header .lower-header {
-  justify-content: space-between;
-}
-
 header .upper-header {
   gap: 4em
 }
 
 .upper-header .search-container {
   gap: 1em;
-  align-items: center;
-  width: 75%;
+  width: 55%;
 }
 
 .search-container form, .search-container input {
@@ -217,7 +217,7 @@ header .upper-header {
   border-style: none;
   border-radius: 25px;
 
-  height: 60%;
+  height: 50%;
   width: 7rem;
 
   padding: 8px 1rem;

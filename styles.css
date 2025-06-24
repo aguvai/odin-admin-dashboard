@@ -167,7 +167,8 @@ header #user-icon {
 header .upper-header,
 header .lower-header,
 .upper-header .search-container,
-.upper-header .profile-section {
+.upper-header .profile-section,
+.lower-header nav {
   display: flex;
 }
 
@@ -198,10 +199,30 @@ header .upper-header {
 
 .lower-header .greeting {
   display: grid;
-  grid-template-columns: 4rem minmax(250px, 4fr);
+  grid-template-columns: 4rem minmax(350px, 4fr);
   grid-template-rows: 2rem 2rem;
   
   column-gap: 1em;
+}
+
+.lower-header nav {
+  align-items: center;
+
+  gap: 1rem;
+}
+
+.lower-header nav button {
+  background-color: var(--blue);
+  
+  border-style: none;
+  border-radius: 25px;
+
+  height: 60%;
+  width: 7rem;
+
+  padding: 8px 1rem;
+  color: white;
+  font-weight: 700;
 }
 
 .greeting p {

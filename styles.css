@@ -208,7 +208,7 @@ header .upper-header {
 .lower-header nav {
   align-items: center;
 
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .lower-header nav button {
@@ -223,6 +223,10 @@ header .upper-header {
   padding: 8px 1rem;
   color: white;
   font-weight: 700;
+}
+
+.lower-header nav button:hover {
+  cursor: pointer;
 }
 
 .greeting p {

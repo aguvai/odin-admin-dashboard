@@ -5,8 +5,10 @@
 
 :root {
   --offwhite: rgb(248, 248, 248);
-  --blue: rgb(32, 179, 236);
+  --blue: rgb(31, 167, 221);
   --offblack: rgb(25, 25, 25);
+  --boxshadow-color: rgb(202, 202, 202);
+  --card-ptext-color: rgb(100, 100, 100);
 }
 
 
@@ -129,6 +131,7 @@ li {
   padding: 0;
 }
 
+
 /*MAIN GRID*/
 
 .main-container {
@@ -166,9 +169,11 @@ header {
   display: grid;
   gap: 1rem;
 
+  z-index: 1;
+
   background-color: var(--offwhite);
 
-  box-shadow: 0px 4px 5px rgb(210, 210, 210);
+  box-shadow: 0px 4px 5px var(--boxshadow-color);
 }
 
 header img {
@@ -264,6 +269,7 @@ header .upper-header {
   grid-area: 1/1/3/1;
 }
 
+
 /* SIDEBAR */
 
 aside {
@@ -272,6 +278,8 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+
+  z-index: 2;
 
   background-color: var(--blue);
   color: var(--offwhite);
@@ -317,9 +325,6 @@ main {
   grid-area: 2/2/3/3;
   padding: 2rem 1.5rem;
   background-color: rgb(228, 228, 228);
-
-  z-index: -1;
-
   
   display: grid;
   grid-template-columns: 6fr 2fr;
@@ -343,6 +348,19 @@ main .text-header {
   display: grid;
 }
 
+.project-card,
+.trending-card-container,
+.announcements-card-container {
+  box-shadow: 2px 4px 5px var(--boxshadow-color);
+}
+
+.project-card p,
+.trending-card p,
+.announcement-card p {
+  color: var(--card-ptext-color);
+  font-size: .9em;
+}
+
 
 /* PROJECTS CONTAINER */
 
@@ -352,18 +370,58 @@ main .text-header {
 
 .card-container {
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, min(200px, 1fr));
 
   gap: 1.5rem;
 }
 
 .project-card {
+  text-overflow: ellipsis;
+  position: relative;
   display: grid;
   background-color: var(--offwhite);
   border-radius: 8px;
-  padding: 2rem 1rem;
+  padding: 1.5rem;
 }
 
+.project-card .project-buttons-container {
+  display: flex;
+  justify-content: right;
+  gap: 1.5em
+}
+
+.project-buttons-container > * {
+  width: 1.5em;
+  padding: 0px;
+  margin: 0px;
+  border-style: none;
+  background-color: transparent;
+}
+
+.project-buttons-container button:hover {
+  cursor: pointer;
+}
+
+.project-buttons-container svg {
+  fill: rgb(48, 48, 48);
+}
+
+.project-buttons-container svg:hover {
+  fill: black;
+}
+
+.project-card .highlight {
+  position: absolute;
+  background-color: rgb(238, 176, 82);
+  width: 7px;
+  height: 100%;
+  border-bottom-left-radius: 6px;
+  border-top-left-radius: 6px;
+}
+
+.project-card h3 {
+  font-size: 1.1em;
+}
 
 /* ASIDE CONTAINER */
 

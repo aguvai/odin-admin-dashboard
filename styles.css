@@ -166,7 +166,7 @@ header {
 
   background-color: var(--offwhite);
 
-  box-shadow: 0px 5px 5px rgb(219, 219, 219);
+  box-shadow: 0px 4px 5px rgb(210, 210, 210);
 }
 
 header img {
@@ -308,12 +308,83 @@ aside .top-container .sidebar-item {
   margin: 0;
 }
 
-/* main */
+
+/* MAIN */
 
 main {
   grid-area: 2/2/3/3;
   padding: 2em 1.5em;
-  background-color: rgb(225, 225, 225);
+  background-color: rgb(228, 228, 228);
 
   z-index: -1;
+
+  
+  display: grid;
+  grid-template-columns: 6fr 2fr;
+  gap: 1.5em;
+}
+
+main .text-header {
+  
+}
+
+.projects-container,
+.card-container,
+.aside-container,
+.announcements-container,
+.trending-container {
+  display: grid;
+}
+
+
+/* PROJECTS CONTAINER */
+
+.projects-container {
+  grid-template-rows: 1fr 16fr;
+  background-color: aliceblue;
+}
+
+.card-container {
+  background-color: rgb(194, 194, 155);
+
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  gap: 1.5em;
+}
+
+.project-card {
+  display: grid;
+  background-color: rgb(241, 233, 160);
+}
+
+
+/* ASIDE CONTAINER */
+
+.aside-container {
+  background-color: red;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+
+/* ANNOUNCEMENTS CONTAINER */
+
+.announcements-container {
+  background-color: yellow;
+}
+
+.announcement-card {
+  background-color: bisque;
+}
+
+
+/* TRENDING CONTAINER */
+
+.trending-container {
+  background-color: maroon;
+}
+
+.trending-card {
+  background-color:lightblue;
 }

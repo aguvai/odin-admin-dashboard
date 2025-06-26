@@ -6,6 +6,7 @@
 :root {
   --offwhite: rgb(248, 248, 248);
   --blue: rgb(32, 179, 236);
+  --offblack: rgb(25, 25, 25);
 }
 
 
@@ -128,7 +129,8 @@ li {
   padding: 0;
 }
 
-/*parent grid*/
+/*MAIN GRID*/
+
 .main-container {
   display: grid;
   grid-template-columns: 250px minmax(500px, 1fr);
@@ -154,7 +156,7 @@ header .lower-header {
 }
 
 
-/* header */
+/* HEADER */
 
 header {
   grid-area: 1/2/1/3;
@@ -262,7 +264,7 @@ header .upper-header {
   grid-area: 1/1/3/1;
 }
 
-/* sidebar */
+/* SIDEBAR */
 
 aside {
   grid-area: 1/1/3/1;
@@ -322,10 +324,13 @@ main {
   display: grid;
   grid-template-columns: 6fr 2fr;
   gap: 1.5rem;
+
+  color: var(--offblack);
 }
 
 main .text-header {
-  
+  font-weight: 600;
+  font-size: 1.225rem;
 }
 
 .projects-container,
@@ -343,12 +348,9 @@ main .text-header {
 
 .projects-container {
   grid-template-rows: 2rem 16fr;
-  background-color: aliceblue;
 }
 
 .card-container {
-  background-color: rgb(194, 194, 155);
-
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
 
@@ -357,7 +359,9 @@ main .text-header {
 
 .project-card {
   display: grid;
-  background-color: rgb(241, 233, 160);
+  background-color: var(--offwhite);
+  border-radius: 8px;
+  padding: 2rem 1rem;
 }
 
 
@@ -375,15 +379,21 @@ main .text-header {
 
 .announcements-card-container,
 .trending-card-container {
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: var(--offwhite);
   border-radius: 8px;
 }
 
 .announcement-card {
-  background-color: bisque;
+  padding: 0em .25em;
+}
+
+.announcements-card-container .divider {
+  background-color: lightgray;
+  width: 100%;
+  height: 1px;
 }
 
 .trending-card {
-  background-color:lightblue;
+
 }

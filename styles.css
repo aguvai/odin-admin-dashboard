@@ -401,11 +401,13 @@ main .text-header {
 .project-card .project-buttons-container {
   display: flex;
   justify-content: right;
-  gap: 1.5em
+  gap: 1.5em;
+  height: 1.5rem;
+  align-self: end;
 }
 
 .project-buttons-container > * {
-  width: 1.5em;
+  width: 1.5rem;
   padding: 0px;
   margin: 0px;
   border-style: none;

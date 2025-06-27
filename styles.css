@@ -9,6 +9,7 @@
   --offblack: rgb(25, 25, 25);
   --boxshadow-color: rgb(202, 202, 202);
   --card-ptext-color: rgb(100, 100, 100);
+  --signature-orange: rgb(238, 176, 82);
 }
 
 
@@ -327,6 +328,15 @@ aside .sidebar-item {
   gap: 1.25rem;
   align-items: center;
   margin: 0 0 0 .75rem;
+
+  padding: .25rem;
+  border-radius: 8px;
+}
+
+aside .middle-container .sidebar-item:hover,
+aside .bottom-container .sidebar-item:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.24);
 }
 
 aside .top-container .sidebar-item {
@@ -389,8 +399,7 @@ main .text-header {
 }
 
 .card-container {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, min(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
   gap: 1.5rem;
 }
@@ -401,6 +410,11 @@ main .text-header {
   background-color: var(--offwhite);
   border-radius: 8px;
   padding: 1.5rem;
+}
+
+.project-card:hover {
+  box-shadow: 4px 6px 5px var(--boxshadow-color);
+  outline: var(--signature-orange) solid 1px;
 }
 
 .project-card .project-buttons-container {
@@ -424,7 +438,7 @@ main .text-header {
 }
 
 .project-buttons-container svg {
-  fill: rgb(48, 48, 48);
+  fill: rgb(92, 92, 92);
 }
 
 .project-buttons-container svg:hover {
@@ -433,7 +447,7 @@ main .text-header {
 
 .project-card .highlight {
   position: absolute;
-  background-color: rgb(238, 176, 82);
+  background-color: var(--signature-orange);
   width: 7px;
   height: 100%;
   border-bottom-left-radius: 6px;
@@ -449,7 +463,7 @@ main .text-header {
 .aside-container {
   grid-template-rows: repeat(2, 1fr);
   width: 100%;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .announcements-container,
@@ -481,21 +495,34 @@ main .text-header {
 
 .announcements-card-container .divider {
   background-color: lightgray;
-  width: 100%;
   height: 1px;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 .trending-card-container {
+  grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
   gap: 1.5em;
 }
 
 .trending-card {
+  background-color: rgb(240, 240, 240);
+  border-radius: 8px;
+  
+  padding: 1rem;
   display: grid;
   grid-template-columns: 3.5em 1fr;
   column-gap: 1em;
   align-items: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.trending-card:hover {
+  background-color: rgb(234, 234, 234);
+  cursor: pointer;
 }
 
 .trending-card img {

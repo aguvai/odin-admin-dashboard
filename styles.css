@@ -210,7 +210,7 @@ header .upper-header {
 }
 
 .search-container input {
-  height: 60%;
+  height: 2rem;
   border-radius: 25px;
   border: 0px;
   background-color: rgb(228, 228, 228);
@@ -344,7 +344,8 @@ main {
   color: var(--offblack);
 
   height: 100%;
-  overflow: auto
+
+  overflow: auto;
 }
 
 main .text-header {

@@ -336,7 +336,7 @@ aside .sidebar-item {
 aside .middle-container .sidebar-item:hover,
 aside .bottom-container .sidebar-item:hover {
   cursor: pointer;
-  background-color: rgba(255, 255, 255, 0.24);
+  background-color: rgba(255, 255, 255, 0.144);
 }
 
 aside .top-container .sidebar-item {
@@ -414,7 +414,7 @@ main .text-header {
 
 .project-card:hover {
   box-shadow: 4px 6px 5px var(--boxshadow-color);
-  outline: var(--signature-orange) solid 1px;
+  outline: var(--signature-orange) solid 2px;
 }
 
 .project-card .project-buttons-container {
